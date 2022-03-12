@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt, seaborn as sns
 import pandas as pd, numpy as np
 
-def PlotNaNCount( X ):
+def PlotNaNs( X ):
     nans = X.isna().sum().sort_values(ascending=False) / X.shape[0]
     nans = nans[nans > 0]
     fig, ax = plt.subplots(figsize=(10, 6))
@@ -50,14 +50,14 @@ def PlotCorrelationToResult(
     )
     ax.set_ylabel(f"Correlation to {y_name}", labelpad=10)
     
+def Plot_ShowFigures(x,y,y_max, y_pos):
+    for i in range(len(x)):
+        plt.text(i, max(0,y_pos[i]), str(y[i])+'/'+str(y_max[i]), ha = 'center')
 def PlotFeatureGroups( 
     X, feature_name, y_name, gap=1, 
     plot=lambda x,y: plt.bar(x, y), show_figures=True, 
     count_name='Count', figsize=(13,6), xlabel='', ylabel='' 
 ):
-    def addlabels(x,y,y_max, y_pos):
-        for i in range(len(x)):
-            plt.text(i, max(0,y_pos[i]), str(y[i])+'/'+str(y_max[i]), ha = 'center')
 
     Grouped = X.groupby(
             pd.cut(
@@ -71,14 +71,16 @@ def PlotFeatureGroups(
         Grouped[y_name] / Grouped[count_name],
     )
     # ax.grid()
-    plt.xlabel(feature_name)
+    # plt.xlabel(feature_name)
     if show_figures:
+        # -- Custom x-axis values
         plt.xticks(
             range(Grouped[feature_name].shape[0]), 
             Grouped.index,
         )
     if show_figures:
-        addlabels(
+        # -- show result/total on bar e.g. 3/5
+        Plot_ShowFigures(
             range(Grouped[feature_name].shape[0]),
             Grouped[y_name], Grouped[count_name],
             Grouped[y_name] / Grouped[count_name]
