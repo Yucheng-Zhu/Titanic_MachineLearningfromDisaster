@@ -9,7 +9,7 @@ def ReplaceNaNs(df):
 
 def SeparateNumericAndNonNumericFeatures(df_train, drops=None):
     import numpy as np
-    numeric_types = [np.number, bool]
+    numeric_types = (np.number, bool)
     if drops == None:
         drops = []
     df_train_forSeparation = df_train.drop(columns=drops)
