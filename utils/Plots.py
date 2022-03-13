@@ -48,11 +48,17 @@ def PlotCorrelationToResult(
         correlations.values, 
         zorder=2, color="#3070a0"
     )
+    ax.set_xlabel('feature')
     ax.set_ylabel(f"Correlation to {y_name}", labelpad=10)
     
-def Plot_ShowFigures(x,y,y_max, y_pos):
+def Plot_ShowFigures(x, y,y_max, y_pos):
     for i in range(len(x)):
-        plt.text(i, max(0,y_pos[i]), str(y[i])+'/'+str(y_max[i]), ha = 'center')
+        plt.text(
+            i, 
+            max(0,y_pos[i]), 
+            str(y[i])+'/'+str(y_max[i]), 
+            ha = 'center'
+        )
 def PlotFeatureGroups( 
     X, feature_name, y_name, gap=1, 
     plot=lambda x,y: plt.bar(x, y), show_figures=True, 
