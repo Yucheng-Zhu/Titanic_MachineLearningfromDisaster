@@ -48,7 +48,7 @@ def PlotCorrelationToResult(
         correlations.values, 
         zorder=2, color="#3070a0"
     )
-    ax.xlabel('feature')
+    ax.set_xlabel('feature')
     ax.set_ylabel(f"Correlation to {y_name}", labelpad=10)
     
 def Plot_ShowFigures(x, y,y_max, y_pos):

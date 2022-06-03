@@ -67,7 +67,12 @@ def PlotFeatureGroups(
 
     Grouped = X.groupby(
             pd.cut(
-                X[feature_name], np.arange(0, X[feature_name].max()+gap, gap)
+                X[feature_name], 
+                np.arange(
+                    0, 
+                    X[feature_name].max()+gap, 
+                    gap
+                )
             )
         ).sum()
     
