@@ -18,7 +18,7 @@ During experiment, I found that bucketing on numerical features reduces predicti
 
 
 ## Models
-It is clear that DNN beats logistic regression in this problem. 3 layers with 512 units per layer work best experimentally. A dropout rate of 0.4 helps to deal with overfitting. 200 epochs are enough, and more epochs lead to overfitting in this simple problem. 
+It is clear that DNN beats logistic regression in this problem. 3 layers with 512 units per layer worked best in experiment. A dropout rate of 0.4 helps to deal with overfitting. 200 epochs are enough, and more epochs lead to overfitting in this simple problem. 
 
 ## Todo
 * Analyze the distribution within each numerical field, and use different scalers accordingly  
