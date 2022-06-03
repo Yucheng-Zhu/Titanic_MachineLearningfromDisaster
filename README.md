@@ -8,7 +8,7 @@ With more victims than survivors on Titanic, the data is slightly imbalanced.
 The correlations between numerical features can easily be plotted. 
 
 #### Numerical Features
-while sex and embarked location are not numberical features, they can be visualized with a sorted tokenization. It is clear that being female had the greatest impact on survivorship on Titanic, followed by sitting in the 1st class, and then paying a higher fare, embarked location, number of parents and children, age, and finally the number of siblings and spouses.
+While sex and embarked location are not numberical features, they can be visualized with a sorted tokenization. It is clear that being female had the greatest impact on survivorship on Titanic, followed by sitting in the 1st class, and then paying a higher fare, embarked location, number of parents and children, age, and finally the number of siblings and spouses.
 
 #### Non-Numerical Features
 Categorical and non-numerical features were also considered. Notably, people embarked from C were the most likely to survive, follwed by Q, which only led to a slightly higher chance of survival than S. Since life boats were unequally allocated to different carbins, ticket number and carbin number give valueable insight into where the victims were, and this repository considers missing values as a separate category. People's surname were also categorized, since many victims and survivors travelled with their family.
