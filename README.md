@@ -1,5 +1,5 @@
 ## About This Repository
-*Titanic - Machine Learning from Disaster* is a [*GettingStarted Prediction Competition* on Kaggle](https://www.kaggle.com/competitions/titanic/). This repository shows that a simple DNN with dropout can work very well on this problem, when the data is carefully feature engineered. It ranked at around top 3% in the Leaderboard.
+*Titanic - Machine Learning from Disaster* is a [*Getting Started Prediction Competition* on Kaggle](https://www.kaggle.com/competitions/titanic/). This repository shows that a simple DNN with dropout can work very well on this problem, when the data is carefully feature engineered. It ranked at around top 3% in the Leaderboard.
 
 ## Feature Engineering
 With more victims than survivors on Titanic, the data is slightly imbalanced. 
