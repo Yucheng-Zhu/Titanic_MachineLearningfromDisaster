@@ -30,7 +30,7 @@ It is clear that DNN beats logistic regression in this problem. 3 layers with 51
 </p>
 
 ## Todo
-* Analyze the distribution within each numerical field, and use different scalers accordingly  
-* Given that the dataset is small, it may be possible to improve the accuracy of the DNN model with k-fold cross validation.
-* Comparing the result with that of a tree based gradient boost model, such as XGBoost
-* Bagging and boosting with more models
+- [ ] Analyze the distribution within each numerical field, and use different scalers accordingly  
+- [ ] Given that the dataset is small, it may be possible to improve the accuracy of the DNN model with k-fold cross validation.
+- [ ] Comparing the result with that of a tree based gradient boost model, such as XGBoost
+- [ ] Bagging and boosting with more models
