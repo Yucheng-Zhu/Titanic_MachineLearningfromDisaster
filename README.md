@@ -6,6 +6,9 @@ With more victims than survivors on Titanic, the data is slightly imbalanced.
 
 ### Data Visualization
 The correlations between numerical features can easily be plotted. 
+<p align="center">
+	<img align="center" width="50%" src="zzImages_README/Correlation Feature Heatmap.png"/>
+</p>
 
 #### Numerical Features
 While sex and embarked location are not numberical features, they can be visualized when sorted by survival rate for each class. It is clear that being female had the greatest impact on survivorship on Titanic, followed by sitting in the 1st class, and then paying a higher fare, embarked location, number of parents and children, age, and finally the number of siblings and spouses.
